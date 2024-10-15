@@ -17,7 +17,7 @@ public class Application {
         String regex = ",|:";
         if (checkWhetherInputUsingCustomDelimiter(input)) {
             regex = regex + '|' + getCustomDelimiter(input);
-            input = input.substring(5, input.length() - 1);
+            input = input.substring(5);
         }
         String[] splited = input.split(regex);
         System.out.println("결과 : " + calculate(splited));
